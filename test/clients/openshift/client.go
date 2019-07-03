@@ -86,7 +86,7 @@ func newClientFromKubeConfig(log *logrus.Entry, kc *v1.Config) (*Client, error) 
 		return &kubeclient.RetryingRoundTripper{
 			Log:          log,
 			RoundTripper: rt,
-			Retries:      5,
+			Retries:      7,
 			GetTimeout:   30 * time.Second,
 		}
 	}

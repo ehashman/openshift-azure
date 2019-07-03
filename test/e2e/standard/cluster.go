@@ -303,10 +303,10 @@ func (sc *SanityChecker) checkCanAccessServices(ctx context.Context) error {
 						RootCAs: pool,
 					},
 				},
-				Retries:    5,
+				Retries:    7,
 				GetTimeout: 30 * time.Second,
 			},
-			Timeout: 10 * time.Second,
+			Timeout: 15 * time.Second,
 		}
 
 		By(fmt.Sprintf("checking %s", svc.url))
